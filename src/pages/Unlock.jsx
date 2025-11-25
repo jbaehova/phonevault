@@ -9,6 +9,8 @@ const Unlock = () => {
   const [countdown, setCountdown] = useState(null);
   const [remainingTime, setRemainingTime] = useState(0);
   const [errorMessage, setErrorMessage] = useState('');
+  const [isStoring, setIsStoring] = useState(false);
+  const [storeConfirmed, setStoreConfirmed] = useState(false);
 
   useEffect(() => {
     if (countdown !== null && remainingTime > 0) {
@@ -63,6 +65,21 @@ const Unlock = () => {
 
   const handleBack = () => {
     navigate('/menu');
+  };
+
+  const handleStore = () => {
+    setIsStoring(true);
+    
+    // 3초 후 보관 확인됨으로 변경
+    setTimeout(() => {
+      setIsStoring(false);
+      setStoreConfirmed(true);
+      
+      // 2초 후 홈으로 이동
+      setTimeout(() => {
+        navigate('/');
+      }, 2000);
+    }, 3000);
   };
 
   return (
@@ -133,6 +150,28 @@ const Unlock = () => {
             <div className={styles.countdownContainer}>
               <h1 className={styles.countdownTitle}>디바이스를 꺼냅니다</h1>
               <div className={styles.countdownTimer}>{formatCountdown(remainingTime)}</div>
+              
+              {!isStoring && !storeConfirmed && (
+                <button
+                  className={styles.storeButton}
+                  onClick={handleStore}
+                >
+                  보관하기
+                </button>
+              )}
+              
+              {isStoring && (
+                <div className={styles.storeStatusContainer}>
+                  <div className={styles.spinner}></div>
+                  <div className={styles.storeStatusText}>보관 확인 중</div>
+                </div>
+              )}
+              
+              {storeConfirmed && (
+                <div className={styles.storeStatusContainer}>
+                  <div className={styles.storeStatusConfirmed}>보관 확인 됨</div>
+                </div>
+              )}
             </div>
           )}
         </div>
