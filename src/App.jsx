@@ -1,6 +1,5 @@
 import './App.css'
-import {Route, Routes, useLocation} from "react-router-dom";
-import Header from "./components/Header.jsx";
+import {Route, Routes} from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import MainMenu from "./pages/MainMenu.jsx";
 import Contacts from "./pages/Contacts.jsx";
@@ -14,12 +13,9 @@ import Call from "./pages/Call.jsx";
 
 function App() {
 
-  const location = useLocation();
-
   return (
     <>
       <div className="App">
-        {(location.pathname !== "/") && <Header />}
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/menu' element={<MainMenu/>} />

@@ -38,6 +38,12 @@
   border-color: #555;
 }
 
+.backButton:focus {
+  outline: none;
+  background-color: #1a1a1a;
+  border-color: #333;
+}
+
 .title {
   color: #fff;
   font-size: 64px;
@@ -71,4 +77,10 @@
 
 .contactButton:active {
   transform: scale(0.98);
+}
+
+.contactButton:focus {
+  outline: none;
+  background-color: #1a1a1a;
+  border-color: #333;
 }

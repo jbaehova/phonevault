@@ -14,6 +14,49 @@
   gap: 30px;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.backButton {
+  padding: 15px 30px;
+  margin-right: 30px;
+  font-size: 32px;
+  background-color: #1a1a1a;
+  color: #fff;
+  border: 2px solid #333;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.backButton:hover {
+  background-color: #2a2a2a;
+  border-color: #555;
+}
+
+.backButton:focus {
+  outline: none;
+  background-color: #1a1a1a;
+  border-color: #333;
+}
+
+.title {
+  color: #fff;
+  font-size: 64px;
+  margin: 0;
+}
+
+.menuContent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+
 .menuButton {
   width: 100%;
   padding: 40px;
@@ -35,4 +78,10 @@
 
 .menuButton:active {
   transform: scale(0.98);
+}
+
+.menuButton:focus {
+  outline: none;
+  background-color: #1a1a1a;
+  border-color: #333;
 }
