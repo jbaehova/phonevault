@@ -62,7 +62,7 @@
 
 .firstRow {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   width: 100%;
 }
@@ -77,7 +77,7 @@
 .settingButton {
   width: 100%;
   padding: 50px 40px;
-  font-size: 64px;
+  font-size: 48px;
   font-weight: bold;
   background-color: #1a1a1a;
   color: #fff;
@@ -85,6 +85,9 @@
   border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .settingButton:hover {

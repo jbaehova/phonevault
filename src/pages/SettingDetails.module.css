@@ -453,3 +453,40 @@
     transform: translateY(0);
   }
 }
+
+/* Other Settings */
+.otherSettingsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  padding: 40px;
+}
+
+.forceTerminateButton {
+  padding: 30px 60px;
+  font-size: 48px;
+  font-weight: bold;
+  background-color: #ff0000;
+  color: #fff;
+  border: 3px solid #cc0000;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.forceTerminateButton:hover {
+  background-color: #cc0000;
+  border-color: #990000;
+  transform: scale(1.05);
+}
+
+.forceTerminateButton:active {
+  transform: scale(0.95);
+}
+
+.forceTerminateButton:focus {
+  outline: none;
+  background-color: #ff0000;
+  border-color: #cc0000;
+}

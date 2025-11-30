@@ -365,6 +365,16 @@ const SettingDetails = () => {
     </div>
   );
 
+  const renderOtherSettings = () => (
+    <div className={styles.settingSection}>
+      <div className={styles.otherSettingsContainer}>
+        <button className={styles.forceTerminateButton}>
+          서비스 강제 종료
+        </button>
+      </div>
+    </div>
+  );
+
   const renderContent = () => {
     switch(category) {
       case '연결':
@@ -377,6 +387,8 @@ const SettingDetails = () => {
         return renderNotificationSettings();
       case '사용모드 설정':
         return renderUsageModeSettings();
+      case '기타':
+        return renderOtherSettings();
       default:
         return <div>설정을 선택해주세요.</div>;
     }

@@ -6,7 +6,7 @@ const SettingsMain = () => {
   
   // First row: 연결, 사용모드 설정
   // Second row: 소리, 조명, 알림
-  const firstRowItems = ['사용모드 설정', '연결'];
+  const firstRowItems = ['사용모드 설정', '연결', '기타'];
   const secondRowItems = ['소리', '조명', '알림'];
 
   const handleSettingClick = (item) => {
